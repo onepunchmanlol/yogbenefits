@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Computer Project</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> </head>
+
+<body>
+	<header> <a href="index.html" class="brand">Gungun Rawat</a>
+		<div class="menu-btn"></div>
+		<div class="navigation">
+			<div class="navigation-items"> <a href="index.html">Home</a> <a href="mudras.html">Mudras</a> <a href="asanas.html">Asanas</a> <a href="about.html">About</a> </div>
+		</div>
+	</header>
+	<section class="home">
+		<video class="video-slide active" src="background/file.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="background/file.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="background/file.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="background/file.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="background/file.mp4" autoplay muted loop></video>
+		<div class="content active">
+			<h1>Yoga<br><span></span></h1>
+			<p>Yoga is a mental physical and spiritual practice which helps in attaining a great mind body and soul. The word yoga has descended from Sanskrit language which refers to 'union' yoga improves the Immune system, flexibility, health and overall personality, yog sutras of Patanjali contains a collection of 196 yog se on practice of yoga also there some yog mudras which helps to overcome certain health related problems. It is also mentioned in bhagwad Geeta that yoga is a balanced state of thoughts and intellect. Yoga is a balanced state of behaviour. We are excited in the situation of pleasure and we become sad when it is a negative situation. Yoga is to maintain equilibrium of the mind in any situation.</p>
+		</div>
+		<div class="content">
+			<h1>Mudra.<br></h1>
+			<h2><span>What is a Mudra?</span></h2>
+			<p>To put it simply, a Mudra is a hand gesture that guides the energy flow to specific areas of the brain. There are many types of Mudras designed to bring different benefits, depending on what we specifically need. They are done in conjunction with breathing to increase the flow of Prana in the body. By practicing it, a connection is developed with the patterns in the brain that influences the unconscious reflexes in the different areas. The internal energy is, in turn, balanced and redirected, creating an impact on the sensory organs, tendons and glands veins.</p> <a href="mudras.html">Read More</a> </div>
+		<div class="content">
+			<h1>Asanas.<br></h1>
+			<h2><span>What is an Asan?</span></h2>
+			<p>An asana is a body posture that is performed to benefit the health and mind. The term has been derived from a Sanskrit term that means “posture” or “pose”. While the gym is a new concept but performing different types of yoga asanas is an age-old concept. While often people feel that asanas do not involve intense cardio and weights, studies prove that asanas can help one in losing weight, stabilise period cramps, shoots up the health of the heart and digestion. Asanas can even be performed at home without any instruments.</p> <a href="asanas.html">Read More</a> </div>
+		<div class="slider-navigation">
+			<div class="nav-btn active"></div>
+			<div class="nav-btn"></div>
+			<div class="nav-btn"></div>
+		</div>
+	</section>
+	<script type="text/javascript">
+	//Javacript for responsive navigation menu
+	const menuBtn = document.querySelector(".menu-btn");
+	const navigation = document.querySelector(".navigation");
+	menuBtn.addEventListener("click", () => {
+		menuBtn.classList.toggle("active");
+		navigation.classList.toggle("active");
+	});
+	//Javacript for video slider navigation
+	const btns = document.querySelectorAll(".nav-btn");
+	const slides = document.querySelectorAll(".video-slide");
+	const contents = document.querySelectorAll(".content");
+	var sliderNav = function(manual) {
+		btns.forEach((btn) => {
+			btn.classList.remove("active");
+		});
+		slides.forEach((slide) => {
+			slide.classList.remove("active");
+		});
+		contents.forEach((content) => {
+			content.classList.remove("active");
+		});
+		btns[manual].classList.add("active");
+		slides[manual].classList.add("active");
+		contents[manual].classList.add("active");
+	}
+	btns.forEach((btn, i) => {
+		btn.addEventListener("click", () => {
+			sliderNav(i);
+		});
+	});
+	</script>
+</body>
+
+</html>
